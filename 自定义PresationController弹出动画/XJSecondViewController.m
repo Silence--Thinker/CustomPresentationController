@@ -26,8 +26,6 @@
 
 - (IBAction)clickBtn:(UIButton *)sender
 {
-    
-    NSLog(@"点击了");
 }
 
 @end
