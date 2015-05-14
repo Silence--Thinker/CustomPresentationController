@@ -8,7 +8,7 @@
 
 #import "XJPresentViewController.h"
 #import "XJPresentationController.h"
-#import "XJPresenterStyle.h"
+
 
 @interface XJPresentViewController ()
 
@@ -48,5 +48,9 @@
     self.modalPresentationStyle = UIModalPresentationCustom;
     // 过渡代理
     self.transitioningDelegate =  _presentSytle;
+    
+    if (self.animateBlock) {
+        _presentSytle.animateBlock = self.animateBlock;
+    }
 }
 @end

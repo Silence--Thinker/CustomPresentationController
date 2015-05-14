@@ -18,6 +18,9 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor redColor];
+    self.animateBlock = ^(UIView *animateView, UIViewController *animateVC, CGRect animateRect, BOOL isPresentation){
+        NSLog(@"在这等着呢");
+    };
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

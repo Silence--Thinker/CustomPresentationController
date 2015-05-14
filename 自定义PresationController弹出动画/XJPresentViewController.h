@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XJPresenterStyle.h"
 
 @interface XJPresentViewController : UIViewController
 
 
+@property (copy, nonatomic) TransitionAnimatedBlock animateBlock;
 
 @end

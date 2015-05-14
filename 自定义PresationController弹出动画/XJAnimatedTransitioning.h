@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface XJAnimatedTransitioning : NSObject <UIViewControllerAnimatedTransitioning>
+typedef void(^TransitionAnimatedBlock)(UIView *animateView, UIViewController *animateVC, CGRect animateRect, BOOL isPresentation);
 
+@interface XJAnimatedTransitioning : NSObject <UIViewControllerAnimatedTransitioning>
+/**
+ *  是否是present状态
+ */
 @property (assign, nonatomic) BOOL isPresentation;
+
+@property (copy, nonatomic) TransitionAnimatedBlock animateBlock;
 
 @end

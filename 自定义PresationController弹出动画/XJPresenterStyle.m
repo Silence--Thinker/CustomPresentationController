@@ -7,7 +7,6 @@
 //
 
 #import "XJPresenterStyle.h"
-#import "XJAnimatedTransitioning.h"
 #import "XJPresentationController.h"
 
 @interface XJPresenterStyle ()
@@ -18,9 +17,13 @@
 @implementation XJPresenterStyle
 
 #pragma mark - UIViewControllerTransitioningDelegate
+
 - (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {
     XJAnimatedTransitioning *transitioning = [[XJAnimatedTransitioning alloc] init];
+    if (self.animateBlock) {
+        transitioning.animateBlock = self.animateBlock;
+    }
     transitioning.isPresentation = YES;
     return transitioning;
 }
@@ -28,6 +31,9 @@
 - (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
 {
     XJAnimatedTransitioning *transitioning = [[XJAnimatedTransitioning alloc] init];
+    if (self.animateBlock) {
+        transitioning.animateBlock = self.animateBlock;
+    }
     transitioning.isPresentation = NO;
     return transitioning;
 }

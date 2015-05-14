@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XJAnimatedTransitioning.h"
 
 @interface XJPresenterStyle : NSObject <UIViewControllerTransitioningDelegate>
+
+@property (copy, nonatomic) TransitionAnimatedBlock animateBlock;
 
 @end
