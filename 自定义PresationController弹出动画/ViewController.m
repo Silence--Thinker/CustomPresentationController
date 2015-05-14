@@ -21,7 +21,6 @@
 {
     [super viewDidLoad];
     //实现模糊效果
-    NSLog(@"hahhaha");
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -31,6 +30,7 @@
     second.modalPresentationStyle = UIModalPresentationCustom;
     // 设置动效代理
     second.transitioningDelegate = self;
+    
     [self presentViewController:second animated:YES completion:nil];
 }
 

@@ -16,19 +16,20 @@
 {
     return 0.5;
 }
+
 // 过渡动画的实现
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext
 {
     UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
     UIView *fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
-    UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-    UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+//    UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+//    UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     
     UIView *animateView = self.isPresentation ? toView : fromView;
-    UIViewController *animateViewController = self.isPresentation ? toViewController : fromViewController;
-    
-    UIView *containerView = [transitionContext containerView];
-    CGRect fromRect = fromView.frame;
+//    UIViewController *animateViewController = self.isPresentation ? toViewController : fromViewController;
+//    
+//    UIView *containerView = [transitionContext containerView];
+//    CGRect fromRect = fromView.frame;
     if (self.isPresentation) {
         animateView.y = - animateView.height;
     }
@@ -39,4 +40,5 @@
         [transitionContext completeTransition:YES];
     }];
 }
+
 @end

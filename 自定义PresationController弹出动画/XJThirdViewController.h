@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 FNWS. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "XJPresentViewController.h"
 
-@interface XJThirdViewController : UIViewController
+@interface XJThirdViewController : XJPresentViewController
 
 @end

@@ -22,6 +22,8 @@
 		E82EA89B1B03455D0059472C /* me_01.png in Resources */ = {isa = PBXBuildFile; fileRef = E82EA89A1B03455D0059472C /* me_01.png */; };
 		E82EA8A11B0346900059472C /* XJSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E82EA89F1B0346900059472C /* XJSecondViewController.m */; };
 		E82EA8A21B0346900059472C /* XJSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E82EA8A01B0346900059472C /* XJSecondViewController.xib */; };
+		E8454E1C1B044FEC00004E80 /* XJPresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8454E1B1B044FEC00004E80 /* XJPresentViewController.m */; };
+		E8454E1F1B047FF700004E80 /* XJPresenterStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = E8454E1E1B047FF700004E80 /* XJPresenterStyle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,10 @@
 		E82EA89E1B0346900059472C /* XJSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJSecondViewController.h; sourceTree = "<group>"; };
 		E82EA89F1B0346900059472C /* XJSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJSecondViewController.m; sourceTree = "<group>"; };
 		E82EA8A01B0346900059472C /* XJSecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XJSecondViewController.xib; sourceTree = "<group>"; };
+		E8454E1A1B044FEC00004E80 /* XJPresentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJPresentViewController.h; sourceTree = "<group>"; };
+		E8454E1B1B044FEC00004E80 /* XJPresentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJPresentViewController.m; sourceTree = "<group>"; };
+		E8454E1D1B047FF700004E80 /* XJPresenterStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJPresenterStyle.h; sourceTree = "<group>"; };
+		E8454E1E1B047FF700004E80 /* XJPresenterStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJPresenterStyle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,10 @@
 				E82EA88E1B02FABF0059472C /* XJAnimatedTransitioning.m */,
 				E82EA8901B02FBA00059472C /* XJPresentationController.h */,
 				E82EA8911B02FBA00059472C /* XJPresentationController.m */,
+				E8454E1A1B044FEC00004E80 /* XJPresentViewController.h */,
+				E8454E1B1B044FEC00004E80 /* XJPresentViewController.m */,
+				E8454E1D1B047FF700004E80 /* XJPresenterStyle.h */,
+				E8454E1E1B047FF700004E80 /* XJPresenterStyle.m */,
 			);
 			path = "自定义PresationController弹出动画";
 			sourceTree = "<group>";
@@ -256,11 +266,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8454E1F1B047FF700004E80 /* XJPresenterStyle.m in Sources */,
 				E82EA88F1B02FABF0059472C /* XJAnimatedTransitioning.m in Sources */,
 				E82EA8921B02FBA00059472C /* XJPresentationController.m in Sources */,
 				E82EA86D1B02F7010059472C /* ViewController.m in Sources */,
 				E82EA86A1B02F7010059472C /* AppDelegate.m in Sources */,
 				E82EA8991B0335C00059472C /* UIView+XJ.m in Sources */,
+				E8454E1C1B044FEC00004E80 /* XJPresentViewController.m in Sources */,
 				E82EA8671B02F7010059472C /* main.m in Sources */,
 				E810A7111B03558F00FE4A1A /* XJThirdViewController.m in Sources */,
 				E82EA8A11B0346900059472C /* XJSecondViewController.m in Sources */,

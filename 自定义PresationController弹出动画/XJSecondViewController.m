@@ -7,9 +7,8 @@
 //
 
 #import "XJSecondViewController.h"
-
+#import "XJThirdViewController.h"
 @interface XJSecondViewController ()
-
 
 @end
 @implementation XJSecondViewController
@@ -26,6 +25,8 @@
 
 - (IBAction)clickBtn:(UIButton *)sender
 {
+    XJThirdViewController *third =  [[XJThirdViewController alloc] init];
+    [self presentViewController:third animated:YES completion:nil];
 }
 
 @end
