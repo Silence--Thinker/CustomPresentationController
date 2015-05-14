@@ -21,6 +21,7 @@
 {
     [super viewDidLoad];
     //实现模糊效果
+    NSLog(@"hahhaha");
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
