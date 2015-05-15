@@ -8,13 +8,15 @@
 
 #import "XJAnimatedTransitioning.h"
 #import "UIView+XJ.h"
-@implementation XJAnimatedTransitioning
 
+const  NSTimeInterval  AnimatedTimeInterval = 0.5;
+
+@implementation XJAnimatedTransitioning
 
 #pragma mark - UIViewControllerAnimatedTransitioning
 - (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext
 {
-    return 0.5;
+    return AnimatedTimeInterval;
 }
 
 // 过渡动画的实现
@@ -30,18 +32,17 @@
     UIView *animateView = self.isPresentation ? toView : fromView;
     UIViewController *animateViewController = self.isPresentation ? toViewController : fromViewController;
     
-    CGRect onScreenFrame = [transitionContext finalFrameForViewController:toViewController];
+    CGRect onScreenFrame = [transitionContext finalFrameForViewController:animateViewController];
     CGRect offScreenFrame = CGRectOffset(onScreenFrame, 0, onScreenFrame.size.height);
     
-    CGRect initialFrame = self.isPresentation ? onScreenFrame : offScreenFrame;
-    CGRect finalFrame = CGRectOffset(onScreenFrame, 0, onScreenFrame.size.height);
+    CGRect initialFrame = self.isPresentation ? offScreenFrame : onScreenFrame;
+    CGRect finalFrame = self.isPresentation ? onScreenFrame : offScreenFrame;
     animateView.frame = initialFrame;
-    
 #warning 动画回调
     if (self.animateBlock) {
         self.animateBlock(animateView, animateViewController, finalFrame, self.isPresentation);
     }
-    [UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:200.0 initialSpringVelocity:2.0 options: UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionBeginFromCurrentState animations:^{
+    [UIView animateWithDuration:AnimatedTimeInterval delay:0.0 usingSpringWithDamping:200.0 initialSpringVelocity:2.0 options: UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionBeginFromCurrentState animations:^{
          animateView.frame = finalFrame;
     } completion:^(BOOL finished) {
         [transitionContext completeTransition:YES];

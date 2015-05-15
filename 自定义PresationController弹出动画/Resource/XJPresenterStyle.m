@@ -10,8 +10,11 @@
 #import "XJPresentationController.h"
 
 @interface XJPresenterStyle ()
-
+/** presentationController控制器 */
 @property (strong, nonatomic) XJPresentationController *presentationVC;
+
+/** 过渡动画 */
+@property (strong, nonatomic) XJAnimatedTransitioning *transitioning;
 
 @end
 @implementation XJPresenterStyle
@@ -20,22 +23,14 @@
 
 - (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {
-    XJAnimatedTransitioning *transitioning = [[XJAnimatedTransitioning alloc] init];
-    if (self.animateBlock) {
-        transitioning.animateBlock = self.animateBlock;
-    }
-    transitioning.isPresentation = YES;
-    return transitioning;
+    self.transitioning.isPresentation = YES;
+    return self.transitioning;
 }
 
 - (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
 {
-    XJAnimatedTransitioning *transitioning = [[XJAnimatedTransitioning alloc] init];
-    if (self.animateBlock) {
-        transitioning.animateBlock = self.animateBlock;
-    }
-    transitioning.isPresentation = NO;
-    return transitioning;
+    self.transitioning.isPresentation = NO;
+    return self.transitioning;
 }
 
 - (XJPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source
@@ -47,4 +42,17 @@
     return self.presentationVC;
 }
 
+- (XJAnimatedTransitioning *)transitioning
+{
+    if (!_transitioning) {
+        _transitioning = [[XJAnimatedTransitioning alloc] init];
+    }
+    return _transitioning;
+}
+
+- (void)setAnimateBlock:(TransitionAnimatedBlock)animateBlock
+{
+    _animateBlock = animateBlock;
+    self.transitioning.animateBlock = animateBlock;
+}
 @end

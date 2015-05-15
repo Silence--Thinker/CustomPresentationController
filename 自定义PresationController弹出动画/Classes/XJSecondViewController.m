@@ -1,26 +1,26 @@
 //
-//  XJThirdViewController.m
+//  XJSecondViewController.m
 //  自定义PresationController弹出动画
 //
 //  Created by Silence on 15/5/13.
 //  Copyright (c) 2015年 FNWS. All rights reserved.
 //
 
-#import "XJThirdViewController.h"
-
-@interface XJThirdViewController ()
+#import "XJSecondViewController.h"
+@interface XJSecondViewController ()
 
 @end
-
-@implementation XJThirdViewController
+@implementation XJSecondViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor redColor];
+    
     self.animateBlock = ^(UIView *animateView, UIViewController *animateVC, CGRect animateRect, BOOL isPresentation){
         NSLog(@"在这等着呢");
     };
+
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

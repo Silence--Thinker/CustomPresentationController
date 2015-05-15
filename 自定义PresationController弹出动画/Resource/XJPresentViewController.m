@@ -9,7 +9,6 @@
 #import "XJPresentViewController.h"
 #import "XJPresentationController.h"
 
-
 @interface XJPresentViewController ()
 
 @property (strong, nonatomic) XJPresenterStyle *presentSytle;
@@ -33,14 +32,6 @@
     return self;
 }
 
-- (instancetype)init
-{
-    if (self = [super init]) {
-        [self xj_commonSetUp];
-    }
-    return self;
-}
-
 - (void)xj_commonSetUp
 {
     _presentSytle = [[XJPresenterStyle alloc] init];
@@ -48,9 +39,11 @@
     self.modalPresentationStyle = UIModalPresentationCustom;
     // 过渡代理
     self.transitioningDelegate =  _presentSytle;
-    
-    if (self.animateBlock) {
-        _presentSytle.animateBlock = self.animateBlock;
-    }
+}
+
+- (void)setAnimateBlock:(TransitionAnimatedBlock)animateBlock
+{
+    _animateBlock = animateBlock;
+    _presentSytle.animateBlock = animateBlock;
 }
 @end

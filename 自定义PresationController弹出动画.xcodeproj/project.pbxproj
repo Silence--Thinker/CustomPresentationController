@@ -7,23 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E810A7111B03558F00FE4A1A /* XJThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E810A7101B03558F00FE4A1A /* XJThirdViewController.m */; };
 		E82EA8671B02F7010059472C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E82EA8661B02F7010059472C /* main.m */; };
-		E82EA86A1B02F7010059472C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E82EA8691B02F7010059472C /* AppDelegate.m */; };
-		E82EA86D1B02F7010059472C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E82EA86C1B02F7010059472C /* ViewController.m */; };
 		E82EA8701B02F7010059472C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E82EA86E1B02F7010059472C /* Main.storyboard */; };
 		E82EA8721B02F7010059472C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E82EA8711B02F7010059472C /* Images.xcassets */; };
 		E82EA8751B02F7010059472C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E82EA8731B02F7010059472C /* LaunchScreen.xib */; };
 		E82EA8811B02F7010059472C /* ___PresationController____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = E82EA8801B02F7010059472C /* ___PresationController____Tests.m */; };
-		E82EA88F1B02FABF0059472C /* XJAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = E82EA88E1B02FABF0059472C /* XJAnimatedTransitioning.m */; };
-		E82EA8921B02FBA00059472C /* XJPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E82EA8911B02FBA00059472C /* XJPresentationController.m */; };
-		E82EA8961B0328360059472C /* me.png in Resources */ = {isa = PBXBuildFile; fileRef = E82EA8951B0328360059472C /* me.png */; };
-		E82EA8991B0335C00059472C /* UIView+XJ.m in Sources */ = {isa = PBXBuildFile; fileRef = E82EA8981B0335C00059472C /* UIView+XJ.m */; };
-		E82EA89B1B03455D0059472C /* me_01.png in Resources */ = {isa = PBXBuildFile; fileRef = E82EA89A1B03455D0059472C /* me_01.png */; };
-		E82EA8A11B0346900059472C /* XJSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E82EA89F1B0346900059472C /* XJSecondViewController.m */; };
-		E82EA8A21B0346900059472C /* XJSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E82EA8A01B0346900059472C /* XJSecondViewController.xib */; };
-		E8454E1C1B044FEC00004E80 /* XJPresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8454E1B1B044FEC00004E80 /* XJPresentViewController.m */; };
-		E8454E1F1B047FF700004E80 /* XJPresenterStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = E8454E1E1B047FF700004E80 /* XJPresenterStyle.m */; };
+		E8D70F551B059907006A4DAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F451B059907006A4DAD /* AppDelegate.m */; };
+		E8D70F561B059907006A4DAD /* UIView+XJ.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F471B059907006A4DAD /* UIView+XJ.m */; };
+		E8D70F571B059907006A4DAD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F491B059907006A4DAD /* ViewController.m */; };
+		E8D70F581B059907006A4DAD /* XJSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F4B1B059907006A4DAD /* XJSecondViewController.m */; };
+		E8D70F591B059907006A4DAD /* XJAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F4E1B059907006A4DAD /* XJAnimatedTransitioning.m */; };
+		E8D70F5A1B059907006A4DAD /* XJPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F501B059907006A4DAD /* XJPresentationController.m */; };
+		E8D70F5B1B059907006A4DAD /* XJPresenterStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F521B059907006A4DAD /* XJPresenterStyle.m */; };
+		E8D70F5C1B059907006A4DAD /* XJPresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F541B059907006A4DAD /* XJPresentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,36 +33,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E810A70F1B03558F00FE4A1A /* XJThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJThirdViewController.h; sourceTree = "<group>"; };
-		E810A7101B03558F00FE4A1A /* XJThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJThirdViewController.m; sourceTree = "<group>"; };
 		E82EA8611B02F7010059472C /* 自定义PresationController弹出动画.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "自定义PresationController弹出动画.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E82EA8651B02F7010059472C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E82EA8661B02F7010059472C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E82EA8681B02F7010059472C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E82EA8691B02F7010059472C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E82EA86B1B02F7010059472C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E82EA86C1B02F7010059472C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E82EA86F1B02F7010059472C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E82EA8711B02F7010059472C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E82EA8741B02F7010059472C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E82EA87A1B02F7010059472C /* 自定义PresationController弹出动画Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "自定义PresationController弹出动画Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E82EA87F1B02F7010059472C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E82EA8801B02F7010059472C /* ___PresationController____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___PresationController____Tests.m"; sourceTree = "<group>"; };
-		E82EA88D1B02FABF0059472C /* XJAnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJAnimatedTransitioning.h; sourceTree = "<group>"; };
-		E82EA88E1B02FABF0059472C /* XJAnimatedTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJAnimatedTransitioning.m; sourceTree = "<group>"; };
-		E82EA8901B02FBA00059472C /* XJPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJPresentationController.h; sourceTree = "<group>"; };
-		E82EA8911B02FBA00059472C /* XJPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJPresentationController.m; sourceTree = "<group>"; };
-		E82EA8951B0328360059472C /* me.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = me.png; sourceTree = "<group>"; };
-		E82EA8971B0335C00059472C /* UIView+XJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XJ.h"; sourceTree = "<group>"; };
-		E82EA8981B0335C00059472C /* UIView+XJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XJ.m"; sourceTree = "<group>"; };
-		E82EA89A1B03455D0059472C /* me_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = me_01.png; sourceTree = "<group>"; };
-		E82EA89E1B0346900059472C /* XJSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJSecondViewController.h; sourceTree = "<group>"; };
-		E82EA89F1B0346900059472C /* XJSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJSecondViewController.m; sourceTree = "<group>"; };
-		E82EA8A01B0346900059472C /* XJSecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XJSecondViewController.xib; sourceTree = "<group>"; };
-		E8454E1A1B044FEC00004E80 /* XJPresentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJPresentViewController.h; sourceTree = "<group>"; };
-		E8454E1B1B044FEC00004E80 /* XJPresentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJPresentViewController.m; sourceTree = "<group>"; };
-		E8454E1D1B047FF700004E80 /* XJPresenterStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJPresenterStyle.h; sourceTree = "<group>"; };
-		E8454E1E1B047FF700004E80 /* XJPresenterStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJPresenterStyle.m; sourceTree = "<group>"; };
+		E8D70F441B059907006A4DAD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E8D70F451B059907006A4DAD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E8D70F461B059907006A4DAD /* UIView+XJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XJ.h"; sourceTree = "<group>"; };
+		E8D70F471B059907006A4DAD /* UIView+XJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XJ.m"; sourceTree = "<group>"; };
+		E8D70F481B059907006A4DAD /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E8D70F491B059907006A4DAD /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E8D70F4A1B059907006A4DAD /* XJSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJSecondViewController.h; sourceTree = "<group>"; };
+		E8D70F4B1B059907006A4DAD /* XJSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJSecondViewController.m; sourceTree = "<group>"; };
+		E8D70F4D1B059907006A4DAD /* XJAnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJAnimatedTransitioning.h; sourceTree = "<group>"; };
+		E8D70F4E1B059907006A4DAD /* XJAnimatedTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJAnimatedTransitioning.m; sourceTree = "<group>"; };
+		E8D70F4F1B059907006A4DAD /* XJPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJPresentationController.h; sourceTree = "<group>"; };
+		E8D70F501B059907006A4DAD /* XJPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJPresentationController.m; sourceTree = "<group>"; };
+		E8D70F511B059907006A4DAD /* XJPresenterStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJPresenterStyle.h; sourceTree = "<group>"; };
+		E8D70F521B059907006A4DAD /* XJPresenterStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJPresenterStyle.m; sourceTree = "<group>"; };
+		E8D70F531B059907006A4DAD /* XJPresentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XJPresentViewController.h; sourceTree = "<group>"; };
+		E8D70F541B059907006A4DAD /* XJPresentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XJPresentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,26 +99,9 @@
 		E82EA8631B02F7010059472C /* 自定义PresationController弹出动画 */ = {
 			isa = PBXGroup;
 			children = (
-				E82EA8971B0335C00059472C /* UIView+XJ.h */,
-				E82EA8981B0335C00059472C /* UIView+XJ.m */,
-				E82EA8681B02F7010059472C /* AppDelegate.h */,
-				E82EA8691B02F7010059472C /* AppDelegate.m */,
-				E82EA86B1B02F7010059472C /* ViewController.h */,
-				E82EA86C1B02F7010059472C /* ViewController.m */,
-				E82EA89E1B0346900059472C /* XJSecondViewController.h */,
-				E82EA89F1B0346900059472C /* XJSecondViewController.m */,
-				E82EA8A01B0346900059472C /* XJSecondViewController.xib */,
-				E810A70F1B03558F00FE4A1A /* XJThirdViewController.h */,
-				E810A7101B03558F00FE4A1A /* XJThirdViewController.m */,
+				E8D70F431B059907006A4DAD /* Classes */,
+				E8D70F4C1B059907006A4DAD /* Resource */,
 				E82EA8641B02F7010059472C /* Supporting Files */,
-				E82EA88D1B02FABF0059472C /* XJAnimatedTransitioning.h */,
-				E82EA88E1B02FABF0059472C /* XJAnimatedTransitioning.m */,
-				E82EA8901B02FBA00059472C /* XJPresentationController.h */,
-				E82EA8911B02FBA00059472C /* XJPresentationController.m */,
-				E8454E1A1B044FEC00004E80 /* XJPresentViewController.h */,
-				E8454E1B1B044FEC00004E80 /* XJPresentViewController.m */,
-				E8454E1D1B047FF700004E80 /* XJPresenterStyle.h */,
-				E8454E1E1B047FF700004E80 /* XJPresenterStyle.m */,
 			);
 			path = "自定义PresationController弹出动画";
 			sourceTree = "<group>";
@@ -135,8 +109,6 @@
 		E82EA8641B02F7010059472C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E82EA89A1B03455D0059472C /* me_01.png */,
-				E82EA8951B0328360059472C /* me.png */,
 				E82EA86E1B02F7010059472C /* Main.storyboard */,
 				E82EA8711B02F7010059472C /* Images.xcassets */,
 				E82EA8731B02F7010059472C /* LaunchScreen.xib */,
@@ -161,6 +133,36 @@
 				E82EA87F1B02F7010059472C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E8D70F431B059907006A4DAD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E8D70F441B059907006A4DAD /* AppDelegate.h */,
+				E8D70F451B059907006A4DAD /* AppDelegate.m */,
+				E8D70F461B059907006A4DAD /* UIView+XJ.h */,
+				E8D70F471B059907006A4DAD /* UIView+XJ.m */,
+				E8D70F481B059907006A4DAD /* ViewController.h */,
+				E8D70F491B059907006A4DAD /* ViewController.m */,
+				E8D70F4A1B059907006A4DAD /* XJSecondViewController.h */,
+				E8D70F4B1B059907006A4DAD /* XJSecondViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E8D70F4C1B059907006A4DAD /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E8D70F4D1B059907006A4DAD /* XJAnimatedTransitioning.h */,
+				E8D70F4E1B059907006A4DAD /* XJAnimatedTransitioning.m */,
+				E8D70F4F1B059907006A4DAD /* XJPresentationController.h */,
+				E8D70F501B059907006A4DAD /* XJPresentationController.m */,
+				E8D70F511B059907006A4DAD /* XJPresenterStyle.h */,
+				E8D70F521B059907006A4DAD /* XJPresenterStyle.m */,
+				E8D70F531B059907006A4DAD /* XJPresentViewController.h */,
+				E8D70F541B059907006A4DAD /* XJPresentViewController.m */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,11 +245,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E82EA8961B0328360059472C /* me.png in Resources */,
-				E82EA89B1B03455D0059472C /* me_01.png in Resources */,
 				E82EA8701B02F7010059472C /* Main.storyboard in Resources */,
 				E82EA8751B02F7010059472C /* LaunchScreen.xib in Resources */,
-				E82EA8A21B0346900059472C /* XJSecondViewController.xib in Resources */,
 				E82EA8721B02F7010059472C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,16 +265,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8454E1F1B047FF700004E80 /* XJPresenterStyle.m in Sources */,
-				E82EA88F1B02FABF0059472C /* XJAnimatedTransitioning.m in Sources */,
-				E82EA8921B02FBA00059472C /* XJPresentationController.m in Sources */,
-				E82EA86D1B02F7010059472C /* ViewController.m in Sources */,
-				E82EA86A1B02F7010059472C /* AppDelegate.m in Sources */,
-				E82EA8991B0335C00059472C /* UIView+XJ.m in Sources */,
-				E8454E1C1B044FEC00004E80 /* XJPresentViewController.m in Sources */,
+				E8D70F5C1B059907006A4DAD /* XJPresentViewController.m in Sources */,
+				E8D70F561B059907006A4DAD /* UIView+XJ.m in Sources */,
+				E8D70F591B059907006A4DAD /* XJAnimatedTransitioning.m in Sources */,
+				E8D70F581B059907006A4DAD /* XJSecondViewController.m in Sources */,
+				E8D70F551B059907006A4DAD /* AppDelegate.m in Sources */,
+				E8D70F5B1B059907006A4DAD /* XJPresenterStyle.m in Sources */,
+				E8D70F571B059907006A4DAD /* ViewController.m in Sources */,
+				E8D70F5A1B059907006A4DAD /* XJPresentationController.m in Sources */,
 				E82EA8671B02F7010059472C /* main.m in Sources */,
-				E810A7111B03558F00FE4A1A /* XJThirdViewController.m in Sources */,
-				E82EA8A11B0346900059472C /* XJSecondViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
