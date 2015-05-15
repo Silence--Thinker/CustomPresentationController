@@ -39,6 +39,7 @@
     self.modalPresentationStyle = UIModalPresentationCustom;
     // 过渡代理
     self.transitioningDelegate =  _presentSytle;
+    
 }
 
 - (void)setAnimateBlock:(TransitionAnimatedBlock)animateBlock

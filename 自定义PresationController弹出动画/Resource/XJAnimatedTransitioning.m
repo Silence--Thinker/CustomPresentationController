@@ -9,7 +9,7 @@
 #import "XJAnimatedTransitioning.h"
 #import "UIView+XJ.h"
 
-const  NSTimeInterval  AnimatedTimeInterval = 0.5;
+
 
 @implementation XJAnimatedTransitioning
 
@@ -22,6 +22,10 @@ const  NSTimeInterval  AnimatedTimeInterval = 0.5;
 // 过渡动画的实现
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext
 {
+    if (self.animateBlock) {
+        self.animateBlock(transitionContext, self.isPresentation);
+        return;
+    }
     
     UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
     UIView *fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
@@ -38,10 +42,7 @@ const  NSTimeInterval  AnimatedTimeInterval = 0.5;
     CGRect initialFrame = self.isPresentation ? offScreenFrame : onScreenFrame;
     CGRect finalFrame = self.isPresentation ? onScreenFrame : offScreenFrame;
     animateView.frame = initialFrame;
-#warning 动画回调
-    if (self.animateBlock) {
-        self.animateBlock(animateView, animateViewController, finalFrame, self.isPresentation);
-    }
+
     [UIView animateWithDuration:AnimatedTimeInterval delay:0.0 usingSpringWithDamping:200.0 initialSpringVelocity:2.0 options: UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionBeginFromCurrentState animations:^{
          animateView.frame = finalFrame;
     } completion:^(BOOL finished) {

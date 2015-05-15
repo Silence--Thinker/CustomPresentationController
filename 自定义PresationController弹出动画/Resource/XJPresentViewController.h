@@ -11,7 +11,10 @@
 
 @interface XJPresentViewController : UIViewController
 
-
+/**
+ *  动画的回调
+ */
 @property (copy, nonatomic) TransitionAnimatedBlock animateBlock;
+
 
 @end

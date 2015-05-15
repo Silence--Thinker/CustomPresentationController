@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^TransitionAnimatedBlock)(UIView *animateView, UIViewController *animateVC, CGRect animateRect, BOOL isPresentation);
+const  NSTimeInterval  AnimatedTimeInterval = 0.5;
+
+typedef void(^TransitionAnimatedBlock)(id <UIViewControllerContextTransitioning> transitionContext,  BOOL isPresentation);
 
 @interface XJAnimatedTransitioning : NSObject <UIViewControllerAnimatedTransitioning>
 /**
