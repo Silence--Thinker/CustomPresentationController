@@ -8,14 +8,25 @@
 
 #import "XJPresentationController.h"
 
+@interface XJPresentationController ()
+/**
+ *  visual 影响视图 自带遮罩效果
+ */
+@property (strong, nonatomic) UIVisualEffectView *effectView;
+/**
+ *  具体的遮罩效果
+ */
+@property (assign, nonatomic) UIVisualEffect *effect;
+
+@end
 @implementation XJPresentationController
 
 /** 自定义动画必须写的添加视图 */ //Transition 过渡
 - (void)presentationTransitionWillBegin
 {
-        self.presentedView.frame = self.containerView.bounds;
+    // 添加视图
+    self.presentedView.frame = self.containerView.bounds;
     [self.containerView insertSubview:self.presentedView atIndex:0];
-//    [self.containerView addSubview:self.presentedView];
 }
 - (void)presentationTransitionDidEnd:(BOOL)completed
 {

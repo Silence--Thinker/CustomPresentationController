@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-const  NSTimeInterval  AnimatedTimeInterval = 0.5;
+const  NSTimeInterval  AnimatedTimeInterval = 0.8;
 
 typedef void(^TransitionAnimatedBlock)(id <UIViewControllerContextTransitioning> transitionContext,  BOOL isPresentation);
 
