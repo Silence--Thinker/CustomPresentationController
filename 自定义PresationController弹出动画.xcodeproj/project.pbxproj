@@ -20,6 +20,7 @@
 		E85B04B51D49AF16004DC380 /* XJPresenterStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F521B059907006A4DAD /* XJPresenterStyle.m */; };
 		E85B04B61D49AF16004DC380 /* XJPresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F541B059907006A4DAD /* XJPresentViewController.m */; };
 		E85B04B71D49AF16004DC380 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E82EA8661B02F7010059472C /* main.m */; };
+		E85B04EA1D49D484004DC380 /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E85B04E91D49D484004DC380 /* CustomNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,8 @@
 		E82EA87A1B02F7010059472C /* 自定义PresationController弹出动画Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "自定义PresationController弹出动画Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E82EA87F1B02F7010059472C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E82EA8801B02F7010059472C /* ___PresationController____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___PresationController____Tests.m"; sourceTree = "<group>"; };
+		E85B04E81D49D484004DC380 /* CustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationController.h; sourceTree = "<group>"; };
+		E85B04E91D49D484004DC380 /* CustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationController.m; sourceTree = "<group>"; };
 		E8D70F441B059907006A4DAD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E8D70F451B059907006A4DAD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E8D70F461B059907006A4DAD /* UIView+XJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XJ.h"; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				E8D70F491B059907006A4DAD /* ViewController.m */,
 				E8D70F4A1B059907006A4DAD /* XJSecondViewController.h */,
 				E8D70F4B1B059907006A4DAD /* XJSecondViewController.m */,
+				E85B04E81D49D484004DC380 /* CustomNavigationController.h */,
+				E85B04E91D49D484004DC380 /* CustomNavigationController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -209,7 +214,7 @@
 		E82EA8591B02F7010059472C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = FNWS;
 				TargetAttributes = {
 					E82EA8601B02F7010059472C = {
@@ -271,6 +276,7 @@
 				E85B04B21D49AF16004DC380 /* XJSecondViewController.m in Sources */,
 				E85B04B31D49AF16004DC380 /* XJAnimatedTransitioning.m in Sources */,
 				E85B04B41D49AF16004DC380 /* XJPresentationController.m in Sources */,
+				E85B04EA1D49D484004DC380 /* CustomNavigationController.m in Sources */,
 				E85B04B51D49AF16004DC380 /* XJPresenterStyle.m in Sources */,
 				E85B04B61D49AF16004DC380 /* XJPresentViewController.m in Sources */,
 				E85B04B71D49AF16004DC380 /* main.m in Sources */,
@@ -336,6 +342,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -404,6 +411,7 @@
 				INFOPLIST_FILE = "自定义PresationController弹出动画/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Silence.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -415,6 +423,7 @@
 				INFOPLIST_FILE = "自定义PresationController弹出动画/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Silence.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -433,6 +442,7 @@
 				);
 				INFOPLIST_FILE = "自定义PresationController弹出动画Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ffff;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/自定义PresationController弹出动画.app/自定义PresationController弹出动画";
 			};
@@ -448,6 +458,7 @@
 				);
 				INFOPLIST_FILE = "自定义PresationController弹出动画Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ffff;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/自定义PresationController弹出动画.app/自定义PresationController弹出动画";
 			};

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "XJSecondViewController.h"
+#import "CustomNavigationController.h"
 
 @interface ViewController ()
 
@@ -24,7 +25,7 @@
     XJSecondViewController *second = [[XJSecondViewController alloc] init];
     
 #pragma no navigation
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:second];
+    CustomNavigationController *nav = [[CustomNavigationController alloc] initWithRootViewController:second];
     second.title = @"34r";
     [self presentViewController:nav animated:YES completion:nil];
 }

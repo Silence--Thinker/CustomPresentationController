@@ -8,6 +8,7 @@
 
 #import "XJSecondViewController.h"
 
+
 extern NSTimeInterval const  kAnimatedTimeInterval;
 
 @interface XJSecondViewController ()
@@ -48,10 +49,6 @@ extern NSTimeInterval const  kAnimatedTimeInterval;
                 [transitionContext completeTransition:YES];
             }];
     };
-        
-        
-
-    
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
