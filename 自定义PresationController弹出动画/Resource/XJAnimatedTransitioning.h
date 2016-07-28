@@ -1,14 +1,12 @@
 //
 //  XJAnimatedTransitioning.h
-//  自定义PresationController弹出动画
+//  CustomPresationController
 //
 //  Created by Silence on 15/5/13.
 //  Copyright (c) 2015年 FNWS. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-
-const  NSTimeInterval  AnimatedTimeInterval = 0.8;
 
 typedef void(^TransitionAnimatedBlock)(id <UIViewControllerContextTransitioning> transitionContext,  BOOL isPresentation);
 
@@ -19,5 +17,7 @@ typedef void(^TransitionAnimatedBlock)(id <UIViewControllerContextTransitioning>
 @property (assign, nonatomic) BOOL isPresentation;
 
 @property (copy, nonatomic) TransitionAnimatedBlock animateBlock;
+
+@property (nonatomic, assign) NSTimeInterval animationDuration;
 
 @end

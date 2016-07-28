@@ -1,6 +1,6 @@
 //
 //  XJAnimatedTransitioning.m
-//  自定义PresationController弹出动画
+//  CustomPresationController
 //
 //  Created by Silence on 15/5/13.
 //  Copyright (c) 2015年 FNWS. All rights reserved.
@@ -9,19 +9,17 @@
 #import "XJAnimatedTransitioning.h"
 #import "UIView+XJ.h"
 
-
+NSTimeInterval const  kAnimatedTimeInterval = 0.5;
 
 @implementation XJAnimatedTransitioning
 
 #pragma mark - UIViewControllerAnimatedTransitioning
-- (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext
-{
-    return AnimatedTimeInterval;
+- (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext {
+    return _animationDuration ? _animationDuration : kAnimatedTimeInterval;
 }
 
 // 过渡动画的实现
-- (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext
-{
+- (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
     if (self.animateBlock) {
         self.animateBlock(transitionContext, self.isPresentation);
         return;
@@ -46,33 +44,20 @@
     animateView.frame = onScreenFrame;
     animateView.alpha = self.isPresentation ? 0 : 1;
     
-    [UIView transitionWithView:animateView duration:AnimatedTimeInterval options:UIViewAnimationOptionShowHideTransitionViews | UIViewAnimationOptionCurveEaseOut animations:^{
+    [UIView transitionWithView:animateView duration:kAnimatedTimeInterval options:UIViewAnimationOptionShowHideTransitionViews | UIViewAnimationOptionCurveEaseOut animations:^{
 //        animateView.frame = finalFrame;
         animateView.alpha = self.isPresentation ? 1 : 0;
     } completion:^(BOOL finished) {
         [transitionContext completeTransition:YES];
     }];
-//    UIViewAnimationOptionCurveEaseInOut //时间曲线函数，由慢到快
-//    
-//    UIViewAnimationOptionCurveEaseIn //时间曲线函数，由慢到特别快
-//    
-//    UIViewAnimationOptionCurveEaseOut //时间曲线函数，由快到慢
-//    
-//    UIViewAnimationOptionCurveLinear //时间曲线函数，匀速
-    
 }
 
-//UIModalTransitionStyleCoverVertical = 0,
-//UIModalTransitionStyleFlipHorizontal,
-//UIModalTransitionStyleCrossDissolve,
-//UIModalTransitionStylePartialCur
 /**
  *  从下往上的动画
  *
  *  @param transitionContext 动画的Context
  */
-- (void)animateTransitionCoverVertical:(id)transitionContext
-{
+- (void)animateTransitionCoverVertical:(id)transitionContext {
     UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
     UIView *fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
     
@@ -89,7 +74,7 @@
     CGRect finalFrame = self.isPresentation ? onScreenFrame : offScreenFrame;
     animateView.frame = initialFrame;
     
-    [UIView animateWithDuration:AnimatedTimeInterval delay:0.0 usingSpringWithDamping:200.0 initialSpringVelocity:2.0 options: UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionBeginFromCurrentState animations:^{
+    [UIView animateWithDuration:kAnimatedTimeInterval delay:0.0 usingSpringWithDamping:200.0 initialSpringVelocity:2.0 options: UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionBeginFromCurrentState animations:^{
         animateView.frame = finalFrame;
     } completion:^(BOOL finished) {
         [transitionContext completeTransition:YES];

@@ -1,6 +1,6 @@
 //
 //  XJPresentationController.m
-//  自定义PresationController弹出动画
+//  CustomPresationController
 //
 //  Created by Silence on 15/5/13.
 //  Copyright (c) 2015年 FNWS. All rights reserved.
@@ -22,22 +22,21 @@
 @implementation XJPresentationController
 
 /** 自定义动画必须写的添加视图 */ //Transition 过渡
-- (void)presentationTransitionWillBegin
-{
+- (void)presentationTransitionWillBegin {
     // 添加视图
     self.presentedView.frame = self.containerView.bounds;
     [self.containerView insertSubview:self.presentedView atIndex:0];
 }
-- (void)presentationTransitionDidEnd:(BOOL)completed
-{
+
+- (void)presentationTransitionDidEnd:(BOOL)completed {
     
 }
-- (void)dismissalTransitionWillBegin
-{
+
+- (void)dismissalTransitionWillBegin {
     
 }
-- (void)dismissalTransitionDidEnd:(BOOL)completed
-{
+
+- (void)dismissalTransitionDidEnd:(BOOL)completed {
     [self.presentedView removeFromSuperview];
 }
 @end

@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E82EA8671B02F7010059472C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E82EA8661B02F7010059472C /* main.m */; };
 		E82EA8701B02F7010059472C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E82EA86E1B02F7010059472C /* Main.storyboard */; };
 		E82EA8721B02F7010059472C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E82EA8711B02F7010059472C /* Images.xcassets */; };
 		E82EA8751B02F7010059472C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E82EA8731B02F7010059472C /* LaunchScreen.xib */; };
 		E82EA8811B02F7010059472C /* ___PresationController____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = E82EA8801B02F7010059472C /* ___PresationController____Tests.m */; };
-		E8D70F551B059907006A4DAD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F451B059907006A4DAD /* AppDelegate.m */; };
-		E8D70F561B059907006A4DAD /* UIView+XJ.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F471B059907006A4DAD /* UIView+XJ.m */; };
-		E8D70F571B059907006A4DAD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F491B059907006A4DAD /* ViewController.m */; };
-		E8D70F581B059907006A4DAD /* XJSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F4B1B059907006A4DAD /* XJSecondViewController.m */; };
-		E8D70F591B059907006A4DAD /* XJAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F4E1B059907006A4DAD /* XJAnimatedTransitioning.m */; };
-		E8D70F5A1B059907006A4DAD /* XJPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F501B059907006A4DAD /* XJPresentationController.m */; };
-		E8D70F5B1B059907006A4DAD /* XJPresenterStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F521B059907006A4DAD /* XJPresenterStyle.m */; };
-		E8D70F5C1B059907006A4DAD /* XJPresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F541B059907006A4DAD /* XJPresentViewController.m */; };
+		E85B04AF1D49AF16004DC380 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F451B059907006A4DAD /* AppDelegate.m */; };
+		E85B04B01D49AF16004DC380 /* UIView+XJ.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F471B059907006A4DAD /* UIView+XJ.m */; };
+		E85B04B11D49AF16004DC380 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F491B059907006A4DAD /* ViewController.m */; };
+		E85B04B21D49AF16004DC380 /* XJSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F4B1B059907006A4DAD /* XJSecondViewController.m */; };
+		E85B04B31D49AF16004DC380 /* XJAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F4E1B059907006A4DAD /* XJAnimatedTransitioning.m */; };
+		E85B04B41D49AF16004DC380 /* XJPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F501B059907006A4DAD /* XJPresentationController.m */; };
+		E85B04B51D49AF16004DC380 /* XJPresenterStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F521B059907006A4DAD /* XJPresenterStyle.m */; };
+		E85B04B61D49AF16004DC380 /* XJPresentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D70F541B059907006A4DAD /* XJPresentViewController.m */; };
+		E85B04B71D49AF16004DC380 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E82EA8661B02F7010059472C /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -265,15 +265,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8D70F5C1B059907006A4DAD /* XJPresentViewController.m in Sources */,
-				E8D70F561B059907006A4DAD /* UIView+XJ.m in Sources */,
-				E8D70F591B059907006A4DAD /* XJAnimatedTransitioning.m in Sources */,
-				E8D70F581B059907006A4DAD /* XJSecondViewController.m in Sources */,
-				E8D70F551B059907006A4DAD /* AppDelegate.m in Sources */,
-				E8D70F5B1B059907006A4DAD /* XJPresenterStyle.m in Sources */,
-				E8D70F571B059907006A4DAD /* ViewController.m in Sources */,
-				E8D70F5A1B059907006A4DAD /* XJPresentationController.m in Sources */,
-				E82EA8671B02F7010059472C /* main.m in Sources */,
+				E85B04AF1D49AF16004DC380 /* AppDelegate.m in Sources */,
+				E85B04B01D49AF16004DC380 /* UIView+XJ.m in Sources */,
+				E85B04B11D49AF16004DC380 /* ViewController.m in Sources */,
+				E85B04B21D49AF16004DC380 /* XJSecondViewController.m in Sources */,
+				E85B04B31D49AF16004DC380 /* XJAnimatedTransitioning.m in Sources */,
+				E85B04B41D49AF16004DC380 /* XJPresentationController.m in Sources */,
+				E85B04B51D49AF16004DC380 /* XJPresenterStyle.m in Sources */,
+				E85B04B61D49AF16004DC380 /* XJPresentViewController.m in Sources */,
+				E85B04B71D49AF16004DC380 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

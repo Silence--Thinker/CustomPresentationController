@@ -1,6 +1,6 @@
 //
 //  XJPresenterStyle.m
-//  自定义PresationController弹出动画
+//  CustomPresationController
 //
 //  Created by Silence on 15/5/14.
 //  Copyright (c) 2015年 FNWS. All rights reserved.
@@ -21,20 +21,17 @@
 
 #pragma mark - UIViewControllerTransitioningDelegate
 
-- (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
-{
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
     self.transitioning.isPresentation = YES;
     return self.transitioning;
 }
 
-- (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
-{
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
     self.transitioning.isPresentation = NO;
     return self.transitioning;
 }
 
-- (XJPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source
-{
+- (XJPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source {
     // 只能用这一种创建方式
     if (!self.presentationVC) {
         self.presentationVC = [[XJPresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
@@ -42,17 +39,19 @@
     return self.presentationVC;
 }
 
-- (XJAnimatedTransitioning *)transitioning
-{
+- (XJAnimatedTransitioning *)transitioning {
     if (!_transitioning) {
         _transitioning = [[XJAnimatedTransitioning alloc] init];
     }
     return _transitioning;
 }
 
-- (void)setAnimateBlock:(TransitionAnimatedBlock)animateBlock
-{
-    _animateBlock = animateBlock;
+- (void)setAnimateBlock:(TransitionAnimatedBlock)animateBlock {
+    _animateBlock = [animateBlock copy];
     self.transitioning.animateBlock = animateBlock;
+}
+
+- (void)setAnimationDuration:(NSTimeInterval)animationDuration {
+    self.transitioning.animationDuration = animationDuration;
 }
 @end
