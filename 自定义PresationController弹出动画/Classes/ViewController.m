@@ -14,16 +14,18 @@
 @end
 @implementation ViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     //实现模糊效果
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    
     XJSecondViewController *second = [[XJSecondViewController alloc] init];
     
-    [self presentViewController:second animated:YES completion:nil];
+#pragma no navigation
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:second];
+    second.title = @"34r";
+    [self presentViewController:nav animated:YES completion:nil];
 }
 @end
