@@ -38,12 +38,12 @@ extern NSTimeInterval const  kAnimatedTimeInterval;
             CGRect initialFrame = isPresentation ? offScreenFrame : onScreenFrame;
             CGRect finalFrame = isPresentation ? onScreenFrame : offScreenFrame;
             animateView.frame = initialFrame;
-            //    animateView.frame = CGRectInset(finalFrame, finalFrame.size.width/2, finalFrame.size.height/2);
+                animateView.frame = CGRectInset(finalFrame, finalFrame.size.width/2, finalFrame.size.height/2);
             animateView.frame = onScreenFrame;
             animateView.alpha = isPresentation ? 0 : 1;
         
             [UIView transitionWithView:animateView duration:duration options:UIViewAnimationOptionShowHideTransitionViews | UIViewAnimationOptionCurveEaseOut animations:^{
-                //        animateView.frame = finalFrame;
+                        animateView.frame = finalFrame;
                 animateView.alpha = isPresentation ? 1 : 0;
             } completion:^(BOOL finished) {
                 [transitionContext completeTransition:YES];
