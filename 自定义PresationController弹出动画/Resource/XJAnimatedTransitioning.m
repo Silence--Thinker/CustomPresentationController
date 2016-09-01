@@ -20,34 +20,40 @@ NSTimeInterval const  kAnimatedTimeInterval = 0.5;
 
 // 过渡动画的实现
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
-    if (self.animateBlock) {
-        self.animateBlock(transitionContext, self.isPresentation);
-        return;
+    
+    UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    
+    UIView *fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
+    UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
+    
+    UIView *containerView = [transitionContext containerView];
+    if (self.isPresentation) {
+        [containerView addSubview:toView];
     }
     
-    UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
-    UIView *fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
-    
-    UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-    UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-    
-    UIView *animateView = self.isPresentation ? toView : fromView;
     UIViewController *animateViewController = self.isPresentation ? toViewController : fromViewController;
+    UIView *animateView = self.isPresentation ? toView : fromView;
+    
+    if (self.animateBlock) {
+        self.animateBlock(transitionContext, animateViewController, animateView, self.isPresentation);
+        return;
+    }
     
     CGRect onScreenFrame = [transitionContext finalFrameForViewController:animateViewController];
     CGRect offScreenFrame = CGRectOffset(onScreenFrame, 0, onScreenFrame.size.height);
     
     CGRect initialFrame = self.isPresentation ? offScreenFrame : onScreenFrame;
     CGRect finalFrame = self.isPresentation ? onScreenFrame : offScreenFrame;
-    animateView.frame = initialFrame;
-    animateView.frame = CGRectInset(finalFrame, finalFrame.size.width/2, finalFrame.size.height/2);
-    animateView.frame = onScreenFrame;
-    animateView.alpha = self.isPresentation ? 0 : 1;
     
-    [UIView transitionWithView:animateView duration:kAnimatedTimeInterval options:UIViewAnimationOptionShowHideTransitionViews | UIViewAnimationOptionCurveEaseOut animations:^{
+    animateView.frame = initialFrame;
+    
+    [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0.0 usingSpringWithDamping:200.0 initialSpringVelocity:2.0 options: UIViewAnimationOptionAllowUserInteraction | UIViewAnimationOptionBeginFromCurrentState animations:^{
         animateView.frame = finalFrame;
-        animateView.alpha = self.isPresentation ? 1 : 0;
     } completion:^(BOOL finished) {
+        if (!self.isPresentation) {
+            [fromView removeFromSuperview];
+        }
         [transitionContext completeTransition:YES];
     }];
 }

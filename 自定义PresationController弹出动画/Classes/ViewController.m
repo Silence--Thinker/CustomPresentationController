@@ -25,8 +25,8 @@
     XJSecondViewController *second = [[XJSecondViewController alloc] init];
     
 #pragma no navigation
-    CustomNavigationController *nav = [[CustomNavigationController alloc] initWithRootViewController:second];
+//    CustomNavigationController *nav = [[CustomNavigationController alloc] initWithRootViewController:second];
     second.title = @"34r";
-    [self presentViewController:nav animated:YES completion:nil];
+    [self presentViewController:second animated:YES completion:nil];
 }
 @end

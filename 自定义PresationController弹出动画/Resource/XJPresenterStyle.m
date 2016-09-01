@@ -9,7 +9,7 @@
 #import "XJPresenterStyle.h"
 #import "XJPresentationController.h"
 
-@interface XJPresenterStyle ()
+@interface XJPresenterStyle () <XJPresentationControllerDelegate>
 /** presentationController控制器 */
 @property (strong, nonatomic) XJPresentationController *presentationVC;
 
@@ -20,8 +20,18 @@
 @implementation XJPresenterStyle
 
 #pragma mark - UIViewControllerTransitioningDelegate
+- (XJPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented
+                                                      presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source {
+    // 只能用这一种创建方式
+    if (!self.presentationVC) {
+        self.presentationVC = [[XJPresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
+        self.presentationVC.xj_presentationDelegate = self;
+    }
+    return self.presentationVC;
+}
 
-- (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
+- (id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
+                                                                   presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
     self.transitioning.isPresentation = YES;
     return self.transitioning;
 }
@@ -31,12 +41,8 @@
     return self.transitioning;
 }
 
-- (XJPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source {
-    // 只能用这一种创建方式
-    if (!self.presentationVC) {
-        self.presentationVC = [[XJPresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
-    }
-    return self.presentationVC;
+- (void)presentationControllerDidDismissed:(XJPresentationController *)controller {
+    self.presentationVC = nil;
 }
 
 - (XJAnimatedTransitioning *)transitioning {
@@ -45,6 +51,8 @@
     }
     return _transitioning;
 }
+
+//- presentationcontr
 
 - (void)setAnimateBlock:(TransitionAnimatedBlock)animateBlock {
     _animateBlock = [animateBlock copy];

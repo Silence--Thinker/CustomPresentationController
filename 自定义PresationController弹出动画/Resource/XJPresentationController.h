@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class XJPresentationController;
+@protocol XJPresentationControllerDelegate <NSObject>
+
+- (void)presentationControllerDidDismissed:(XJPresentationController *)controller;
+
+@end
+
 @interface XJPresentationController : UIPresentationController
+
+@property (nonatomic, weak) id<XJPresentationControllerDelegate> xj_presentationDelegate ;
 
 @end
